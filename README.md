@@ -9,9 +9,9 @@ NOTE: this is a fork => https://www.npmjs.com/package/codemirror-spell-checker
 
 ## Install
 
-Via [npm](https://www.npmjs.com/package/codemirror-spell-checker-plus).
+Via [npm](https://www.npmjs.com/package/codemirror-spell-checker-extended).
 ```
-npm install codemirror-spell-checker-plus --save
+npm install codemirror-spell-checker-extended --save
 ```
 
 ## Build to contribute
