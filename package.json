@@ -1,6 +1,6 @@
 {
-  "name": "codemirror-spell-checker",
-  "version": "1.1.2",
+  "name": "codemirror-spell-checker-plus",
+  "version": "1.0.0",
   "description": "Dead-simple spell checking in CodeMirror.",
   "keywords": [
     "codemirror",
@@ -17,17 +17,8 @@
     "build:dev": "webpack --config-name dev",
     "build:prod": "webpack --config-name prod"
   },
-  "homepage": "https://github.com/NextStepWebs/codemirror-spell-checker",
   "main": "./src/js/spell-checker.js",
   "license": "MIT",
-  "company": "Next Step Webs, Inc.",
-  "author": {
-    "name": "Wes Cossick",
-    "url": "http://www.WesCossick.com"
-  },
-  "bugs": {
-    "url": "https://github.com/NextStepWebs/codemirror-spell-checker/issues"
-  },
   "dependencies": {
     "typo-js": "*"
   },
@@ -41,6 +32,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NextStepWebs/codemirror-spell-checker"
+    "url": "https://github.com/pete-wildberger/codemirror-spell-checker"
   }
 }
