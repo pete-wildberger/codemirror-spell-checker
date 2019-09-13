@@ -14,8 +14,8 @@
     "javascript"
   ],
   "scripts": {
-    "build-dev": "webpack --config-name dev",
-    "build-prod": "webpack --config-name prod"
+    "build:dev": "webpack --config-name dev",
+    "build:prod": "webpack --config-name prod"
   },
   "homepage": "https://github.com/NextStepWebs/codemirror-spell-checker",
   "main": "./src/js/spell-checker.js",
