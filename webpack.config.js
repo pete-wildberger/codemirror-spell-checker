@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -48,6 +49,9 @@ module.exports = [
             new MiniCssExtractPlugin({
                 filename: '[name].min.css',
             }),
+            new webpack.optimize.LimitChunkCountPlugin({
+                maxChunks: 1
+              })
         ],
         module: {
             rules: [
@@ -58,7 +62,27 @@ module.exports = [
             ],
         },
         optimization: {
-            minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+            minimizer: [
+                new TerserJSPlugin({
+                    parallel: true,
+                    terserOptions: {
+                        ecma: 6,
+                        compress: {
+                            drop_console: true
+                        }
+                    }
+                }),
+                new OptimizeCSSAssetsPlugin({
+                    cssProcessorPluginOptions: {
+                        preset: ['default', { discardComments: { removeAll: true } }]
+                    },
+                    canPrint: true
+                })
+            ],
+            splitChunks: {
+				chunks: 'all'
+			},
+			usedExports: true
         }
     }
 ];
